@@ -5,7 +5,7 @@ In this small project we will take a look at Seattle weather dataset from Kaggle
 <br><br>
 
 ### Libraries I've used:
-- ***tensorflow, keras, sklearn*** for machine learning
+- ***pytorch, sklearn*** for machine learning
 - ***numpy, scipy, random*** for numerical and statistical operations
 - ***matplotlib, seaborn*** for data visualization
 
@@ -15,9 +15,6 @@ In this small project we will take a look at Seattle weather dataset from Kaggle
    - Anomalies
    - Visualization
    - Preparing data for model
-   - Skull size
-   - Class weights
-   - Feature scaling
 
 2) **Building model**
    - Train / test split
@@ -40,6 +37,8 @@ This reduced the number of values fed into the model in the calculations resulti
 ![temp-avg](./media/temp-avg.png)
 
 # { Summary }
+
+![summary](./media/summary.png)
 
 ### What I achieved:
 - I learned a lot about recurrent neural networks and how to work with time series data
