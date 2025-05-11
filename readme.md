@@ -42,16 +42,19 @@ The maximum and minimum temperature series changes over time with a very stable 
 Basing on this strong correlation, _**maximum temperature**_ and _**minimum temperature**_ has been swapped with _**average temperature**_. <br>
 This reduced the number of values fed into the model in the calculations resulting with more efficient training.
 
+### Weather condition balance
+![balance](./media/balance.png)
+
 ### Features
 ![granger](./media/granger.png)
 
+Despite the fact that Granger causality test is mainly used for linear models. <br>
 Although the trend was kind of similar for both features, the precipitation was way above 0.05 threshold, <br>
 this indicated a low predictive impact for average temperature feature prediction. <br>
-Despite the fact that Granger causality test is mainly used for linear models. <br><br>
 
-The model has been tested with different configurations. <br>
+The model has been tested within different configurations. <br>
 First configuration contained one feature (average temperature), <br>
-in second configuration wind and precipitation features has been added to the model <br>
+in second configuration wind and precipitation features has been added <br>
 to see if it actually helps in predicting average temperature.
 
 
@@ -63,6 +66,8 @@ White '+' marks are the predicted values returned by model. <br>
 The red lines in the first plot indicate the deviation of the error from the true values.
 ### Cross-validation
 ![summary](./media/summary.png)
+First plot contains scoring per fold. While second one is mean of all folds per model.
+
 Models have been tested with different parameter combinations like, _hidden_size_, _batch_size_ and sequence_length). <br>
 Every time the model that used 3 features had slightly lower loss and error. <br>
 It turned out that using model with 3 features results in better accuracy of predicting average temperature. <br>
