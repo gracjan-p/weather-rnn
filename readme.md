@@ -39,7 +39,7 @@ and use them to test functionality of Recurrent Neural Network.
 ![temp-avg](./media/temp-avg.png)
 
 The maximum and minimum temperature series changes over time with a very stable vertical shift. <br>
-Basing on this strong correlation of _**max temperature**_ and _**minimum temperature**_ has been swapped with _**average temperature**_. <br>
+Basing on this strong correlation, _**maximum temperature**_ and _**minimum temperature**_ has been swapped with _**average temperature**_. <br>
 This reduced the number of values fed into the model in the calculations resulting with more efficient training.
 
 ### Features
