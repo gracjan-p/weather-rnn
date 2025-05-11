@@ -1,49 +1,69 @@
 ![bg](./media/bg.png)
 
 # { Introduction }
-In this small project we will take a look at Seattle weather dataset from Kaggle to extract important features and use them to test functionality of Recurrent Neural Network.
-<br><br>
-
+In this small project I've used Seattle weather dataset from Kaggle to extract important features
+and use them to test functionality of Recurrent Neural Network.
 ### Libraries I've used:
-- ***pytorch, sklearn*** for machine learning
-- ***numpy, scipy, random*** for numerical and statistical operations
+- ***torch, sklearn*** for machine learning
+- ***pandas*** for data manipulation and analysis
+- ***numpy, scipy, statsmodels*** for numerical and statistical operations
 - ***matplotlib, seaborn*** for data visualization
 
 ### The full process includes:
 1) **Data exploration**
    - Overview
-   - Anomalies
    - Visualization
-   - Preparing data for model
+   - Data seasonality
+   - Granger causality
 
-2) **Building model**
+2) **Preparing dataset**
+   - Load data
+   - Feature scaling
    - Train / test split
-   - Sequencing datasets
-   - Class LSTM
-   - Training function
-   - Testing function
-   - Training and Testing the RNN models
+   - Data loader
 
-3) **Conclusion**
+3) **Building model**
+   - Class RNN
+   - Training
+   - Testing
+   - Second model
+   - Cross-validation (single & multiple features)
+   - Model comparison
 
-# { Extracted features }
+4) **Conclusion**
+
+
+# { Insights }
 
 ### Average temperature
+![temp-avg](./media/temp-avg.png)
+
 The maximum and minimum temperature series changes over time with a very stable vertical shift. <br>
-Basing on this strong correlation I've decided to replace them with _**average temperature**_ which is basically mean value of these two series. <br>
+Basing on this strong correlation of _**max temperature**_ and _**minimum temperature**_ has been swapped with _**average temperature**_. <br>
 This reduced the number of values fed into the model in the calculations resulting with more efficient training.
 
-![corr](./media/corr.png)
-![temp-avg](./media/temp-avg.png)
+### Features
+![granger](./media/granger.png)
+
+Although the trend was kind of similar for both features, the precipitation was way above 0.05 threshold, <br>
+this indicated a low predictive impact for average temperature feature prediction. <br>
+Despite the fact that Granger causality test is mainly used for linear models. <br><br>
+
+The model has been tested with different configurations. <br>
+First configuration contained one feature (average temperature), <br>
+in second configuration wind and precipitation features has been added to the model <br>
+to see if it actually helps in predicting average temperature.
+
 
 # { Summary }
 
+### Prediction errors
+![pred-1](./media/pred-1.png)
+White '+' marks are the predicted values returned by model. <br>
+The red lines in the first plot indicate the deviation of the error from the true values.
+### Cross-validation
 ![summary](./media/summary.png)
-
-### What I achieved:
-- I learned a lot about recurrent neural networks and how to work with time series data
-- LSTM model that recognizes patterns within time series data
-
-### Future ideas:
-- Remove chaotic data and compare new results with previous predictions.
-- Apply Granger causality
+Models have been tested with different parameter combinations like, _hidden_size_, _batch_size_ and sequence_length). <br>
+Every time the model that used 3 features had slightly lower loss and error. <br>
+It turned out that using model with 3 features results in better accuracy of predicting average temperature. <br>
+Overall I think this project gives quiet simple fundamentals to understand the functionality of Recurrent Neural Networks.
