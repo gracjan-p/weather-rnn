@@ -1,8 +1,9 @@
 ![bg](./media/bg.png)
 
 # { Introduction }
-In this small project I've touched on Seattle weather dataset from Kaggle to extract important features
-and use them to test functionality of Recurrent Neural Network.
+In this small project I've touched on Seattle weather dataset from Kaggle,
+extracted important features and used them to test functionality of
+Recurrent Neural Network.
 ### Libraries I've used:
 - ***torch, sklearn*** for machine learning
 - ***pandas*** for data manipulation and analysis
