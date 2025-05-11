@@ -62,7 +62,7 @@ to see if it actually helps in predicting average temperature.
 
 ### Prediction errors
 ![pred-1](./media/pred-1.png)
-White '+' marks are the predicted values returned by model. <br>
+White '+' marks indicates the predicted values returned by model. <br>
 The red lines in the first plot indicate the deviation of the error from the true values.
 ### Cross-validation
 ![summary](./media/summary.png)
