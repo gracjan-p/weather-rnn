@@ -68,7 +68,7 @@ The red lines in the first plot indicate the deviation of the error from the tru
 ![summary](./media/summary.png)
 First plot contains scoring per fold. While second one is mean of all folds per model.
 
-Models have been tested with different parameter combinations like, _hidden_size_, _batch_size_ and sequence_length). <br>
+Models have been tested with different parameter combinations like, _hidden_size_, _batch_size_ and sequence_length. <br>
 Every time the model that used 3 features had slightly lower loss and error. <br>
 It turned out that using model with 3 features results in better accuracy of predicting average temperature. <br>
 Overall I think this project gives quiet simple fundamentals to understand the functionality of Recurrent Neural Networks.
