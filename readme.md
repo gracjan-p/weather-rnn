@@ -1,7 +1,7 @@
 ![bg](./media/bg.png)
 
 # { Introduction }
-In this small project I've used Seattle weather dataset from Kaggle to extract important features
+In this small project I've touched on Seattle weather dataset from Kaggle to extract important features
 and use them to test functionality of Recurrent Neural Network.
 ### Libraries I've used:
 - ***torch, sklearn*** for machine learning
@@ -48,7 +48,7 @@ This reduced the number of values fed into the model in the calculations resulti
 ### Features
 ![granger](./media/granger.png)
 
-Despite the fact that Granger causality test is mainly used for linear models. <br>
+Despite Granger causality test is mainly used for linear models, it shows interesting information about features. <br>
 Although the trend was kind of similar for both features, the precipitation was way above 0.05 threshold, <br>
 this indicated a low predictive impact for average temperature feature prediction. <br>
 
